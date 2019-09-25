@@ -2,4 +2,4 @@ const colors = {
     background: 'grey',
 };
 
-export default colors;
+export default colors

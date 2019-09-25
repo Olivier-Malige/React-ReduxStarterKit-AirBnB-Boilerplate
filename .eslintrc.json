@@ -13,12 +13,6 @@
 
   "parser": "babel-eslint",
 
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
   "rules": {
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
@@ -31,12 +25,22 @@
     "import/prefer-default-export": "off",
     "quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
     "no-console": "warn",
-    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"]}],
+    "react/destructuring-assignment": ["error","always", { "ignoreClassFields": true }],
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"]}],// exepte "state" for Redux-starter-kit
     "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
     "jsx-a11y/label-has-for": "off", // @TODO find the right rule setup to handle styled-components
     "jsx-a11y/label-has-associated-control": "off" // @TODO find the right rule setup to handle styled-components
 
 },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
   "settings": {
     "import/resolver": {
       "node": {
