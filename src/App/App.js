@@ -16,14 +16,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  return (
-    <Provider store={store}>
-      <GlobalStyle />
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-    </Provider>
-  );
+    return (
+        <Provider store={store}>
+            <GlobalStyle />
+            <BrowserRouter>
+                <Routes />
+            </BrowserRouter>
+        </Provider>
+    );
 }
 
 export default App;
