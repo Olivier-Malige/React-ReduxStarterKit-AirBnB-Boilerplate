@@ -1,8 +1,9 @@
 import { configureStore } from 'redux-starter-kit'
-import template from './template.slice'
+import model from './reducers/model/model.slice'
 
+// combine slices here
 const store = configureStore({
-    reducer: { template },
+    reducer: { model },
 });
 
 export default store;

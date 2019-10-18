@@ -2,15 +2,13 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import store from '../store/store'
-import Routes from './Routes/Routes'
-import colors from '../constantes/colors'
+import store from '../../store/store'
+import Router from './Router/Router'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
   body {
     font-family: 'Roboto', 'sans-serif';
-    background-color: ${colors.background}
     margin: 0;
   }
 `
@@ -20,7 +18,7 @@ function App() {
         <Provider store={store}>
             <GlobalStyle />
             <BrowserRouter>
-                <Routes />
+                <Router />
             </BrowserRouter>
         </Provider>
     );

@@ -10,10 +10,16 @@
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
     "redux-starter-kit": "^0.7.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "prop-types": "latest",
+    "@storybook/addon-actions": "^5.2.4",
+    "@storybook/addon-links": "^5.2.4",
+    "@storybook/addons": "^5.2.4",
+    "@storybook/react": "^5.2.4"
   },
   "devDependencies": {
-    "prop-types": "latest",
+    "@babel/core": "^7.6.4",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.17.3",
@@ -26,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "airbnb"
