@@ -1,10 +1,10 @@
-import { createSlice } from 'redux-starter-kit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const modelSlice = createSlice({
-    slice: 'model',
+    name: 'model',
     initialState: {},
     reducers: {},
-});
+})
 
 // export const {} = templateThunk.actions
 

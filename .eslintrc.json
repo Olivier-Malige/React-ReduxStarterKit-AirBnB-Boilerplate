@@ -1,53 +1,57 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
+    "extends": [
+        "airbnb",
+        "prettier",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:prettier/recommended"
+    ],
 
-  "plugins": [
-    "react-hooks",
-    "import"
-  ],
+    "plugins": ["react-hooks", "import", "prettier"],
 
-  "parser": "babel-eslint",
+    "parser": "babel-eslint",
 
-  "rules": {
-    "import/imports-first": ["error", "absolute-first"],
-    "import/newline-after-import": "error",
-    "indent": ["error", 4, {"ignoredNodes": ["JSXElement"]}],
-    "react/jsx-indent": ["error", 4],
-    "react/jsx-filename-extension": "off",
-    "react/jsx-indent-props": ["error", 4],
-    "semi": "off",
-    "linebreak-style": "off",
-    "import/prefer-default-export": "off",
-    "quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
-    "no-console": "warn",
-    "react/jsx-props-no-spreading" : "off",
-    "react/destructuring-assignment": ["error","always", { "ignoreClassFields": true }],
-    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"]}],// exepte "state" for Redux-starter-kit
-    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
-    "jsx-a11y/label-has-for": "off", // @TODO find the right rule setup to handle styled-components
-    "jsx-a11y/label-has-associated-control": "off" // @TODO find the right rule setup to handle styled-components
-
-  },
-  "globals": {
-    "window": true,
-    "document": true,
-    "localStorage": true,
-    "FormData": true,
-    "FileReader": true,
-    "Blob": true,
-    "navigator": true
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src/"]
-      }
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "import/imports-first": ["error", "absolute-first"],
+        "import/newline-after-import": "error",
+        "react/jsx-wrap-multilines": ["error", { "declaration": false, "assignment": false }],
+        //    "indent": ["error", 4, {"ignoredNodes": ["JSXElement"]}], Removed beacause prettier control it
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent-props": ["error", 4],
+        "semi": "off",
+        "linebreak-style": "off",
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+        "no-console": "warn",
+        "react/jsx-props-no-spreading": "off",
+        "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true }],
+        "no-param-reassign": [
+            "error",
+            { "props": true, "ignorePropertyModificationsFor": ["state"] }
+        ], // exepte "state" for Redux-starter-kit
+        "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+        "jsx-a11y/label-has-for": "off", // @TODO find the right rule setup to handle styled-components
+        "jsx-a11y/label-has-associated-control": "off" // @TODO find the right rule setup to handle styled-components
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "localStorage": true,
+        "FormData": true,
+        "FileReader": true,
+        "Blob": true,
+        "navigator": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src/"]
+            }
+        }
     }
-
-  }
 }

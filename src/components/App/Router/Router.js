@@ -7,6 +7,6 @@ const Router = () => (
     <>
         <Route exact path={routes.HOME} component={Model} />
     </>
-);
+)
 
-export default Router;
+export default Router
