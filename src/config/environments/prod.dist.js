@@ -1,3 +1,3 @@
 export default {
-    SERVER_API_URL: '',
-}
+  SERVER_API_URL: "",
+};

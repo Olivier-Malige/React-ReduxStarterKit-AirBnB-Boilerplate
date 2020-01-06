@@ -1,6 +1,6 @@
 // Add here all app routes
 const routes = {
-    HOME: '/',
-}
+  HOME: "/",
+};
 
-export default routes
+export default routes;

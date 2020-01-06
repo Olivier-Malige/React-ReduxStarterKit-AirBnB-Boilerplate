@@ -15,7 +15,6 @@
     "prop-types": "latest",
     "prettier": "^1.19.1",
     "formik": "^1.5.8",
-    "keycloak-js": "^8.0.1",
     "@storybook/addon-actions": "^5.2.4",
     "@storybook/addon-links": "^5.2.4",
     "@storybook/addons": "^5.2.4",

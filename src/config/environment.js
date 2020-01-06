@@ -1,4 +1,4 @@
-import dev from './environments/dev'
-import prod from './environments/prod'
+import dev from "./environments/dev.dist";
+import prod from "./environments/prod.dist";
 
-export default process.env.NODE_ENV === 'production' ? prod : dev
+export default process.env.NODE_ENV === "production" ? prod : dev;
